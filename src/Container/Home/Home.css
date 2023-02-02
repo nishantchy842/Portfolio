@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&family=Noto+Serif+Toto:wght@500&display=swap');
+
+.main-container {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(0deg, #27323A,  #11223d 50%, rgb(3, 3, 4));
+}
+
+.second-container {
+    height: 100%;
+    /* margin: auto; */
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .8) 80%, rgba(0, 0, 0, .8) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0px 0px rgb(244, 237, 237);
+    border-radius: 50%;
+    height: 380px;
+    width: 380px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-container img {
+    object-fit: cover;
+}
+
+.image-container img:hover {
+    transform: scale(1.07);
+    transition: 1s ease-out;
+}
+
+.intro-container {
+    padding: 25px;
+    margin-top: 50px;
+    font-family: 'Kanit', sans-serif;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+
+.intro-container #hidiv {
+    color: #138f6e;
+    text-align: center;
+}
+
+.description-container {
+    text-align: center;
+    color: rgb(253, 252, 250);
+    font-family: Montserrat;
+    font-size: medium;
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.media-container ul {
+    display: flex;
+}
+
+.media-container ul li a #icon {
+    width: 80%;
+    height: 80%;
+}
