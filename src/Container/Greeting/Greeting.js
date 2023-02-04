@@ -2,6 +2,7 @@ import React from 'react'
 import './Greeting.css'
 import 'animate.css';
 import { useState, useEffect, useRef } from 'react'
+import vedio from './vedio.mp4'
 
 
 export default function Greeting() {
@@ -13,9 +14,9 @@ export default function Greeting() {
         const currentHour = new Date().getHours();
         if (currentHour < 12) {
             setGreeting("MORNING");
-        } else if(currentHour> 12 && currentHour < 20){
+        } else if (currentHour > 12 && currentHour < 20) {
             setGreeting("AFTERNOON");
-        }else{
+        } else {
             setGreeting("EVENING");
         }
         const interval = setInterval(() => {
@@ -24,9 +25,31 @@ export default function Greeting() {
         return () => clearInterval(interval);
     }, []);
 
+    const videoEl = useRef(null);
+
+    const attemptPlay = () => {
+        videoEl &&
+            videoEl.current &&
+            videoEl.current.play().catch(error => {
+                console.error("Error attempting to play", error);
+            });
+    };
+
+    useEffect(() => {
+        attemptPlay();
+    }, []);
     return (
         <div id='greeting'>
-            <div className='box'><h1>Hi,<br />GOOD {greeting}</h1>
+            <video
+                playsInline
+                loop
+                muted
+                alt="All the devices"
+                src={vedio}
+                ref={videoEl}
+            />
+            <div className='box'>
+                <h1>Hi,<br />GOOD {greeting}</h1>
                 <h2>{time}</h2>
             </div>
         </div>

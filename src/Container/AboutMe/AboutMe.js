@@ -11,7 +11,7 @@ export default function AboutMe() {
       <div className='about-me'>
       <h1 className='aboutme' data-aos="fade-down">ABOUT ME</h1>
         <div className='about-me-main-container'>
-          <div className='image-me-container'><img data-aos="fade-right" src='https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='imagediv'></img></div>
+          <div className='image-me-container'><img data-aos="fade-right" src='https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='imagediv'></img></div>
           
           <div className='infos-container' data-aos="zoom-in-left">
             <h2 >Hi, I am Er. Nishant Chaudhary</h2>
