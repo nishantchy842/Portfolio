@@ -14,7 +14,6 @@ const MyResume = () => {
             <h1 style={{textAlign:"center"}} id="resume" data-aos="zoom-in-down">MY RESUME</h1>
         </div>
       </div>
-     
       </div>
   )
 }
