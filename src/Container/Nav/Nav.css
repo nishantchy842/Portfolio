@@ -1,14 +1,14 @@
  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 nav {
-    background-color: #141728;
+    position: fixed;
     width: 100%;
     margin: auto;
-    /* padding: 35px 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 #firstname{
     color: white;
     padding: 20px;
@@ -25,7 +25,6 @@ nav {
     background-color: aliceblue;
     position: absolute;
     border-radius: 50px;
-    cursor: pointer;
 }
 .logo img:hover{
     transform: scale(1.07);
@@ -33,7 +32,7 @@ nav {
 
 }
 .logo {
-
+    cursor: pointer;
     margin-left: 50px;
     padding: 5px;
     font-weight: bold;
@@ -45,6 +44,9 @@ nav {
     padding: 33px;
     width: 50vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bolder ;
 }
 
 .home-to-contact ul li {
@@ -52,6 +54,8 @@ nav {
     display: inline-block;
     margin: 0 20px;
     position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 .home-to-contact ul li::after{
     content: '';
@@ -66,11 +70,7 @@ nav {
 .home-to-contact ul li:hover::after{
     width: 100%;
 }
-ul li a {
-    color: aliceblue;
-    text-decoration: none;
-    margin:20px;
-}
+
 button {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 17px;

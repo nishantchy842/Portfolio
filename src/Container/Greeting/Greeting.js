@@ -1,8 +1,8 @@
 import React from 'react'
 import './Greeting.css'
 import 'animate.css';
-import Home from '../Home/Home';
 import { useState, useEffect, useRef } from 'react'
+
 
 export default function Greeting() {
     const [greeting, setGreeting] = useState("")
@@ -24,21 +24,11 @@ export default function Greeting() {
         return () => clearInterval(interval);
     }, []);
 
-    const ref = useRef(null);
-
-    function handleClick() {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-
     return (
-        <div>
+        <div id='greeting'>
             <div className='box'><h1>Hi,<br />GOOD {greeting}</h1>
                 <h2>{time}</h2>
-                <section id="section07" class="demo">
-                    <a href="#section08" onClick={handleClick}><span></span><span></span><span></span>Scroll</a>
-                </section>
             </div>
-            <div ref={ref}><Home/></div>
         </div>
     )
 }

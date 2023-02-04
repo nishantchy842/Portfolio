@@ -14,7 +14,7 @@ export default function Home() {
         Aos.init({duration:2000})
     },[])
     return (
-        <div>
+        <div id='home'>
             <div className='main-container'>
                 <div className='second-container' data-aos="zoom-in-up">
                     <div className='image-container' ><img src={image} alt='new'></img></div>
@@ -32,18 +32,8 @@ export default function Home() {
                             loop
                         /></h2>
                     </div>
-                    <div className='description-container' data-aos="zoom-in-up">
+                    <div className='description-container'>
                         I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.
-                    </div>
-                    <div className='media-container'>
-                            <div className='media-div' data-aos="zoom-in-up">
-                            <ul>
-                            <li><a href='#'><AiFillFacebook id='icon'/></a></li>
-                            <li><a href='#'><AiFillInstagram id='icon'/></a></li>
-                            <li><a href='#'><AiFillLinkedin id='icon'/></a></li>
-                            <li><a href='#'><AiFillTwitterCircle id='icon'/></a></li>
-                            </ul>
-                            </div>
                     </div>
                 </div>
             </div>
