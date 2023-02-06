@@ -33,7 +33,7 @@ export default function Home() {
                         /></h2>
                     </div>
                     <div className='description-container'>
-                        I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.
+                       <h3>I am a Full Stack Web Developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.</h3> 
                     </div>
                 </div>
             </div>

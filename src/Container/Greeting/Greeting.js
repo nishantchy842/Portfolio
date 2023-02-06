@@ -2,7 +2,7 @@ import React from 'react'
 import './Greeting.css'
 import 'animate.css';
 import { useState, useEffect, useRef } from 'react'
-import vedio from './vedio.mp4'
+import video from './video.mp4'
 
 
 export default function Greeting() {
@@ -45,9 +45,10 @@ export default function Greeting() {
                 loop
                 muted
                 alt="All the devices"
-                src={vedio}
+                src={video}
                 ref={videoEl}
-            />
+            >
+            </video>
             <div className='box'>
                 <h1>Hi,<br />GOOD {greeting}</h1>
                 <h2>{time}</h2>

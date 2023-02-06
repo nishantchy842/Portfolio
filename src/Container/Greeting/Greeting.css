@@ -1,53 +1,52 @@
-.greeting{
-    height: 100vh;
+#greeting {
+  height: 100vh;
   width: 100%;
 }
-video{
+
+video {
   width: 100%;
   height: 100%;
-  filter: blur(5px);
   object-fit: cover;
 }
-.box{
+
+.box {
   position: absolute;
- width: 100%;
- height: 100vh;
+  width: 100%;
   top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
+
 .box h1 {
-    margin-top: 100px;
-    display: block;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 8em;
-    text-align: center;
-    color: #000;
+  margin-top: 250px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 8em;
+  text-align: center;
+  color: #000;
+}
+
+.box h1,
+.box h2 {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(left, #A3F7BF 0%, #29A19C 33%, #435055 66%, #27323A 100%);
+  background-size: 700px;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  background-clip: text;
+  -webkit-animation: gradient-move 1s linear infinite;
+  animation: gradient-move 1.5s linear infinite;
+}
+
+.box h1:hover {
+  animation: gradient-move 0.3s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0 0;
   }
-  
-  .box h1,.box h2 {
-    -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(left, #A3F7BF 0%, #29A19C 33%, #435055 66%, #27323A 100%);
-    background-size: 700px;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
-    background-clip: text;
-    -webkit-animation: gradient-move 1s linear infinite;
-    animation: gradient-move 1.5s linear infinite;
+
+  100% {
+    background-position: 700px 0;
   }
-  
-  .box h1:hover {
-    animation: gradient-move 0.3s linear infinite;
-  }
-  
-  @keyframes gradient-move {
-    0% {
-      background-position: 0 0; }
-    100% {
-      background-position: 700px 0; } 
-  }
-  
+}

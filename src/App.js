@@ -11,11 +11,11 @@ const App = () => {
   return (
     <div className='App'>
       <Nav />
-     
      <Greeting />
      <Home />
      <AboutMe />
      <MySkill />
+     <MyResume />
     </div>
   );
 }

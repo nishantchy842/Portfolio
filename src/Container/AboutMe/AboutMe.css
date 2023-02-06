@@ -8,15 +8,25 @@ h1 {
     color: beige;
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 8em;
+    font-size: 4em;
 }
 
 .about-me-main-container {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content: center;
     align-items: center;
 }
-
+@media screen and (min-width: 515px){
+    .about-me-main-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+   
+    h1{
+        font-size: 7em;
+    }
+  }
 .image-me-container {
     margin-top: 50px;
     width: 50vw;
@@ -24,7 +34,7 @@ h1 {
     background: #191c29;
     padding: 6px;
     position: relative;
-    border-radius: 4px;
+    border-radius: 10px;
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
 }
