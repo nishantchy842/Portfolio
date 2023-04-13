@@ -5,7 +5,6 @@ import './MySkill.css'
 import VisibilitySensor from "react-visibility-sensor";
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
-import { color } from '@mui/system';
 
 const MySkill = () => {
   const percetage = [80, 70]

@@ -1,6 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
 
 nav {
+    background-color: red;
     position: fixed;
     width: 100%;
     margin: auto;
@@ -8,23 +9,10 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 2;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-#firstname{
-    color: white;
-    padding: 20px;
-    font-family: Montserrat;
-
-}
-#lastname{
-    margin: 0;
-    color: #138f6e;
-    font-family: Montserrat;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .logo img{
-    background-color: aliceblue;
-    position: absolute;
-    border-radius: 50px;
+    padding: -50px;
 }
 .logo img:hover{
     transform: scale(1.07);
@@ -35,9 +23,6 @@ nav {
     cursor: pointer;
     margin-left: 50px;
     padding: 5px;
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: 'Kanit', sans-serif;
 }
 
 .home-to-contact ul {

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&family=Noto+Serif+Toto:wght@500&display=swap');
 
 .main-container {
-    height: 100vh;
+    height: 80vh;
     position: relative;
     background: linear-gradient(0deg, #27323A,  #11223d 50%, rgb(3, 3, 4));
 }

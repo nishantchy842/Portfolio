@@ -24,9 +24,9 @@ export default function AboutMe() {
               <li>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rampurwa, Kolhavi-11,Madesh Prades</li>
             </ul>
             <button >
-              <span class="transition"></span>
-              <span class="gradient"></span>
-              <span class="label">Download CV</span>
+              <span className="transition"></span>
+              <span className="gradient"></span>
+              <span className="label">Download CV</span>
             </button>
           </div>
           </div>
