@@ -4,7 +4,11 @@ import logo from './logo1.png'
 import 'animate.css';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
+import menu from '../../assets/menu.svg'
+import close from '../../assets/close.svg'
+import { styles } from '../../style';
 import * as FaIcons from 'react-icons/fa'
+import { Button } from '@mui/material';
 
 
 
@@ -12,32 +16,44 @@ export default function Nav() {
     const [navColor, setNavColor] = useState('transparent')
     const [navSize, setNavSize] = useState('8rem')
     const [color, setColor] = useState('white')
+    const [toggle, setToggle] = useState(false);
+
     const NavData = [
         {
+            id: 1,
             title: "Home",
-            path: "/",
-            icon: <FaIcons.FaHome />,
-          },
-          {
-            title: "features",
-            path: "/features",
-            icon: <FaIcons.FaRegStickyNote />,
-          },
-          {
-            title: "video",
-            path: "/video",
-            icon: <FaIcons.FaTruck />,
-          },
-          {
-            title: "plans",
-            path: "/plans",
-            icon: <FaIcons.FaRegEnvelope />,
-          },
+            path: "home",
+        },
+        {
+            id: 2,
+            title: "About",
+            path: "about",
+        },
+        {
+            id: 3,
+            title: "Skill",
+            path: "skill",
+        },
+        {
+            id: 4,
+            title: "Resume",
+            path: "resume",
+        },
+        {
+            id: 5,
+            title: "Project",
+            path: "project",
+        },
+        {
+            id: 6,
+            title: "Contact",
+            path: "contact",
+        },
     ]
 
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setNavColor('#283048') : setNavColor('transparent')
-        window.scrollY > 10 ? setNavSize('5rem') : setNavSize('8rem')
+        window.scrollY > 10 ? setNavSize('5rem') : setNavSize('6rem')
         window.scrollY > 10 ? setColor('#138f6e') : setColor('white')
     }
     useEffect(() => {
@@ -47,39 +63,60 @@ export default function Nav() {
         };
     }, []);
     return (
-        <div>
+        <>
             <nav
                 style={{
                     backgroundColor: navColor,
                     height: navSize,
                     transition: "all 1s"
-                }} >
-             
+                }} 
+                className={`${
+                    styles.paddingX
+                  } w-full flex items-center py-5 fixed top-0 z-20 `}
+                >
 
-                <div className='logo' data-aos="flip-left"
-                    data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
+                <div className='logo w-full flex justify-between items-center max-w-7xl mx-auto'  >
+                
                     <Link to="greeting" spy={true} smooth={true} offset={-100} duration={500}>
-                         <img src={logo} width={90} height={60} alt='logo'></img>
-                        
+                        <img className='w-20 h-20 object-contain' src={logo} alt='logo'></img>
+
                     </Link>
                 </div>
                 <div className='home-to-contact'>
-                    <ul style={{ color: color }}>
-                        <li><Link to="home" spy={true} smooth={true} offset={-100} duration={500} >Home</Link></li>
-                        <li><Link to="about" spy={true} smooth={true} offset={-100} duration={500} >ABOUT</Link></li>
-                        <li><Link to="skill" spy={true} smooth={true} offset={-100} duration={500}>MySkill</Link></li>
-                        <li><Link to="resume" spy={true} smooth={true} offset={-100} duration={500}>MyResume</Link></li>
-                        <li><Link to="project" spy={true} smooth={true} offset={-100} duration={500}>PROJECT</Link></li>
-                        <li><Link to="contact" spy={true} smooth={true} offset={-100} duration={500}>CONTACT</Link></li>
+                    <ul style={{ color: color }} className='list-none hidden sm:flex flex-row gap-10'>
+                        {
+                            NavData.map((item, id) => {
+                                return <li key={item.id} className='text-secondary'><Link to={item.path} spy={true} smooth={true} offset={-100} duration={500}>{item.title}</Link></li>
+                            })
+
+                        }
                     </ul>
+                    <div className='md:hidden flex flex-1 justify-end items-center'>
+                    <img
+                      src={toggle ? close : menu}
+                      alt='menu'
+                      className='w-[28px] h-[28px] object-contain'
+                      onClick={() => setToggle(!toggle)}
+                    />
+          
+                    <div
+                      className={`${
+                        !toggle ? "hidden" : "flex"
+                      } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+                    >
+                      <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
+                      {
+                        NavData.map((item, id) => {
+                            return <li key={item.id} className='text-secondary'><Link to={item.path} spy={true} smooth={true} offset={-100} duration={500}>{item.title}</Link></li>
+                        })
+
+                    }
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <button>
-                    <span className="transition"></span>
-                    <span className="gradient"></span>
-                    <span className="label">Hire Me</span>
-                </button>
+
             </nav>
-        </div>
+      </>
     )
 }
