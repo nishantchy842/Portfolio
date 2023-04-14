@@ -13,7 +13,12 @@ import git from './git.png'
 import mongodb from './mongodb.png'
 import prasadi from './prasadi.png'
 import ncit from './ncit.png'
-
+import roomfinder from './roomfinder.png'
+import digitec from './Digitec.png'
+import superapp from './superapp.png'
+import github from './github.png'
+import cv from './Nishant_cv.png'
+import contactside from './people-and-technology.png'
 export  {
     frontend,
     backend,
@@ -29,6 +34,12 @@ export  {
     git,
     mongodb,
     prasadi,
-    ncit
+    ncit,
+    roomfinder,
+    digitec,
+    superapp,
+    github,
+    cv,
+    contactside
     
 }

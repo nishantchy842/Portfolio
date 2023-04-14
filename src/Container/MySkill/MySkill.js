@@ -8,9 +8,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import { motion } from 'framer-motion';
-import {styles} from '../../style'
-import {skills} from '../../Constrants'
-import {textVariant} from '../../utils/motion'
+import { styles } from '../../style'
+import { skills } from '../../Constrants'
+import { textVariant } from '../../utils/motion'
+import { technologies } from '../../Constrants';
+import { SectionWrapper } from '../../hoc';
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -60,24 +62,24 @@ const MySkill = () => {
 
   return (
     <div id='skill'>
-    <motion.div variants={textVariant()}>
-  
-    <h2 className={`${styles.sectionHeadText} text-center`}>
-      My Skills And Educations.
-    </h2>
-  </motion.div>
+      <motion.div variants={textVariant()}>
 
-  <div className='mt-20 flex flex-col'>
-    <VerticalTimeline>
-      {skills.map((item, index) => (
-        <ExperienceCard
-          key={`item-${index}`}
-          experience={item}
-        />
-      ))}
-    </VerticalTimeline>
-  </div>
+        <h2 className={`${styles.sectionHeadText} text-center`}>
+          My Skills And Educations.
+        </h2>
+      </motion.div>
+
+      <div className='mt-20 flex flex-col'>
+        <VerticalTimeline>
+          {skills.map((item, index) => (
+            <ExperienceCard
+              key={`item-${index}`}
+              experience={item}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
     </div >
   );
 }
-export default MySkill
+export default SectionWrapper(MySkill, "myskill");

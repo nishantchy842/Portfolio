@@ -6,6 +6,7 @@ import { styles } from "../../style";
 // import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
+import { contactside } from "../../assets";
 
 const Contact = () => {
   const formRef = useRef();
@@ -127,6 +128,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
+      <img src={contactside} alt="/" />
       </motion.div>
     </div>
   );
