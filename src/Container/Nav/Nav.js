@@ -34,11 +34,7 @@ export default function Nav() {
             title: "Skill",
             path: "skill",
         },
-        {
-            id: 4,
-            title: "Resume",
-            path: "resume",
-        },
+    
         {
             id: 5,
             title: "Project",

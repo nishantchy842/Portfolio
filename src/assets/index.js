@@ -1,0 +1,34 @@
+import frontend from './frontend.png'
+import backend from './backend.png'
+import reactjs from './reactjs.png'
+import fullstack from './fullstack.png'
+import html from './html-5.png'
+import css from './css-3.png'
+import javascript from './js.png'
+import redux from './redux.png'
+import tailwind from './tailwind.png'
+import typescript from './typescript.png'
+import nodejs from './nodejs.png'
+import git from './git.png'
+import mongodb from './mongodb.png'
+import prasadi from './prasadi.png'
+import ncit from './ncit.png'
+
+export  {
+    frontend,
+    backend,
+    reactjs,
+    fullstack,
+    html,
+    css,
+    javascript,
+    redux,
+    tailwind,
+    typescript,
+    nodejs,
+    git,
+    mongodb,
+    prasadi,
+    ncit
+    
+}
