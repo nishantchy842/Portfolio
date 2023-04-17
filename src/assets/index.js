@@ -19,6 +19,9 @@ import superapp from './superapp.png'
 import github from './github.png'
 import cv from './Nishant_cv.png'
 import contactside from './people-and-technology.png'
+import postman from './postman.png'
+import bootstrap from './bootstrap.png'
+import photoshop from './photoshop.png'
 export  {
     frontend,
     backend,
@@ -40,6 +43,8 @@ export  {
     superapp,
     github,
     cv,
-    contactside
-    
+    contactside,
+    postman,
+    bootstrap,
+    photoshop
 }

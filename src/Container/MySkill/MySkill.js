@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import 'react-circular-progressbar/dist/styles.css';
-// import './MySkill.css'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,7 +10,6 @@ import { motion } from 'framer-motion';
 import { styles } from '../../style'
 import { skills } from '../../Constrants'
 import { textVariant } from '../../utils/motion'
-import { technologies } from '../../Constrants';
 import { SectionWrapper } from '../../hoc';
 
 const ExperienceCard = ({ experience }) => {
@@ -64,7 +62,7 @@ const MySkill = () => {
     <div id='skill'>
       <motion.div variants={textVariant()}>
 
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center underline`} data-aos="fade-down">
           My Skills And Educations.
         </h2>
       </motion.div>

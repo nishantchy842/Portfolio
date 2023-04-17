@@ -1,21 +1,24 @@
-
-
 .box {
   position: absolute;
   width: 100%;
-  top: 45%;
+  top: 50%;
 
 }
 
 .box h1 {
   font-family: Montserrat;
-  color: #000;
 }
 
 .box h1,
 .box h2 {
   -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(left, #A3F7BF 0%, #29A19C 33%, #435055 66%, #27323A 100%);
+  background: #59C173;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background-size: 700px;
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -25,9 +28,9 @@
   animation: gradient-move 1.5s linear infinite;
 }
 
-.box h1:hover {
+/* .box h1:hover {
   animation: gradient-move 0.3s linear infinite;
-}
+} */
 
 @keyframes gradient-move {
   0% {
@@ -37,4 +40,4 @@
   100% {
     background-position: 700px 0;
   }
-} 
+}

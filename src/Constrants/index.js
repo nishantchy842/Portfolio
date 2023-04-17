@@ -17,7 +17,10 @@ import {
   ncit,
   superapp,
   roomfinder,
-  digitec
+  digitec,
+  postman,
+  bootstrap,
+  photoshop
 
 } from "../assets";
 
@@ -78,8 +81,20 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "BootStrap",
+    icon: bootstrap,
+  },
+  {
+    name: "Photoshop",
+    icon: photoshop,
   },
 ];
 

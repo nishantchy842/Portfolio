@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import './Nav.css'
 import logo from './logo1.png'
 import 'animate.css';
@@ -7,8 +7,6 @@ import { useState } from 'react';
 import menu from '../../assets/menu.svg'
 import close from '../../assets/close.svg'
 import { styles } from '../../style';
-import * as FaIcons from 'react-icons/fa'
-import { Button } from '@mui/material';
 
 
 

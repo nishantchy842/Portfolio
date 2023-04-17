@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { styles } from "../../style";
-// import { styles } from "../styles";
-// import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
-import { contactside } from "../../assets";
+import small from '../../assets/small.png'
+
 
 const Contact = () => {
   const formRef = useRef();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -30,39 +30,38 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
+    emailjs
+      .send( 
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: "Nishant Chaudhary",
+          from_email: form.email,
+          to_email: "nishantchaudhary842@gmail.com",
+          message: form.message,
+        },
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
 
-    // emailjs
-    //   .send(
-    //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-    //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    //     {
-    //       from_name: form.name,
-    //       to_name: "JavaScript Mastery",
-    //       from_email: form.email,
-    //       to_email: "sujata@jsmastery.pro",
-    //       message: form.message,
-    //     },
-    //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setLoading(false);
-    //       alert("Thank you. I will get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
 
-    //       setForm({
-    //         name: "",
-    //         email: "",
-    //         message: "",
-    //       });
-    //     },
-    //     (error) => {
-    //       setLoading(false);
-    //       console.error(error);
-
-    //       alert("Ahh, something went wrong. Please try again.");
-    //     }
-    //   );
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
   };
 
   return (
@@ -84,6 +83,7 @@ const Contact = () => {
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
             <input
+              required
               type='text'
               name='name'
               value={form.name}
@@ -95,6 +95,7 @@ const Contact = () => {
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your email</span>
             <input
+              required
               type='email'
               name='email'
               value={form.email}
@@ -106,6 +107,7 @@ const Contact = () => {
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
+              required
               rows={7}
               name='message'
               value={form.message}
@@ -126,9 +128,12 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] p-10 mt-20'
       >
-      <img src={contactside} alt="/" />
+   
+      <img className="drop-shadow-md hover:drop-shadow-xl animate-pulse " src={small} alt="/" />
+    
+        
       </motion.div>
     </div>
   );
