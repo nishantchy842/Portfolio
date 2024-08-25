@@ -22,6 +22,8 @@ import contactside from './people-and-technology.png'
 import postman from './postman.png'
 import bootstrap from './bootstrap.png'
 import photoshop from './photoshop.png'
+import eshikshya from './eshikhsha.svg'
+import sukraraj from './sukraraj.svg'
 export  {
     frontend,
     backend,
@@ -46,5 +48,7 @@ export  {
     contactside,
     postman,
     bootstrap,
-    photoshop
+    photoshop,
+    eshikshya,
+    sukraraj
 }

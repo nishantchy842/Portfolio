@@ -69,7 +69,7 @@ const ProjectCard = ({
 
 const Project = () => {
   return (
-    <div id='project' className='border'>
+    <div id='project' className=''>
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText} underline`}>Projects.</h2>
       </motion.div>
@@ -86,7 +86,7 @@ const Project = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-20 grid grid-cols-3 gap-7'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

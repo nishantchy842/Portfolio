@@ -20,7 +20,9 @@ import {
   digitec,
   postman,
   bootstrap,
-  photoshop
+  photoshop,
+  eshikshya,
+  sukraraj
 
 } from "../assets";
 
@@ -156,25 +158,79 @@ const skills = [
 ];
 const projects = [
   {
-    name: "Room Finder",
+    name: "Tandoori Tikka lounge",
     description:
-      "Web-based platform that allows users to search, book, and manage room rentals. Made using reactjs and firebase",
+      <>
+        Visually Appealing Design: Captures the essence of Tandoori Tikka Lounge with a vibrant and user-friendly interface.
+        <br />  Enhanced User Experience: Streamlined navigation and intuitive layout make it easier for users to explore the menu, book reservations, and learn more about the restaurant.
+      </>
+    ,
     tags: [
       {
-        name: "react",
+        name: "Next js",
         color: "blue-text-gradient",
       },
       {
-        name: "firebase",
+        name: "Nest js",
         color: "green-text-gradient",
       },
       {
-        name: "Bootstrap",
+        name: "Tailwind and Sass",
+        color: "text-white",
+      },
+      {
+        name: "Hostinger",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Railway",
+        color: "text-white",
+      },
+      {
+        name: "Postgress",
+        color: "text-blue-400",
+      },
+    ],
+    image: 'https://www.tandooritikkalounge.com/logo.jpg',
+    source_code_link: "https://www.tandooritikkalounge.com",
+  },
+  {
+    name: "Eshiksha Network - Learn to Lead",
+   
+    tags: [
+      {
+        name: "Next js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Full Callendar",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redux, Redux saga",
         color: "pink-text-gradient",
       },
     ],
-    image: roomfinder,
-    source_code_link: "https://github.com/EmpSwarup/roomfinder.git",
+    image: eshikshya,
+    source_code_link: "https://eshikshanetwork.com/",
+  },
+  {
+    name: "Sukraraj Tropical & Infectious Disease Hospital",
+    description:
+      "Hospital Management system",
+    tags: [
+      {
+        name: "Next app router",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React Query",
+        color: "green-text-gradient",
+      },
+   
+    ],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Emblem_of_Nepal.svg',
+    source_code_link: "https://stidh.gov.np/en",
   },
   {
     name: "DigiTec_Ecommerce",
